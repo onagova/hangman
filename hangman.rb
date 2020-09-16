@@ -1,4 +1,5 @@
 require 'yaml'
+require 'erb'
 
 module Hangman
   class Board
@@ -80,7 +81,8 @@ module Hangman
     def initialize
       @save_manager = SaveManager.new
       @board = nil
-      puts File.read('txts/note.txt')
+      note_template = ERB.new(File.read('txts/note.erb'))
+      puts note_template.result(binding)
       puts ''
     end
 
