@@ -1,0 +1,6 @@
+** IMPORTANT **
+This program will read/write to local directory {HOME}/onagova_saves/hangman
+
+During 'make your guess' prompt -save {name} command can be use to save your game state
+EX. '-save foo' (without the quotes) will create a save file at {HOME}/onagova_saves/hangman/foo.sv
+**
